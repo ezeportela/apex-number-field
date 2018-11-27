@@ -1,7 +1,7 @@
 {
   "name": "Number Field Dynamic Action Plugin",
   "version": "1.0",
-  "description": "Oracle APEX Dynamic Action Plugin for for prevent the user from entering unnecessary characters in the fields whose type is number.",
+  "description": "Oracle APEX Dynamic Action Plugin for prevent the user from entering unnecessary characters in the fields whose type is number.",
   "keywords": [
     "dynamic action type plugin",
     "number field",
