@@ -56,7 +56,7 @@ wwv_flow_api.create_plugin(
 '  ',
 '  ',
 '  apex_javascript.add_library(',
-'      p_name        => ''script'',',
+'      p_name        => ''script.min'',',
 '      p_directory   => p_plugin.file_prefix || ''js/'',',
 '      p_version     => null,',
 '      p_skip_extension => false',
@@ -80,7 +80,7 @@ wwv_flow_api.create_plugin(
 ,p_help_text=>'This plugin prevents the user from entering unnecessary characters in the fields whose type is number. It can be used as a dynamic action.'
 ,p_version_identifier=>'1.0.0'
 ,p_about_url=>'https://github.com/ezeportela/apex-number-field'
-,p_files_version=>15
+,p_files_version=>16
 );
 wwv_flow_api.create_plugin_attribute(
  p_id=>wwv_flow_api.id(14113828546327974812)
@@ -150,6 +150,28 @@ wwv_flow_api.create_plugin_file(
  p_id=>wwv_flow_api.id(14831983884296147211)
 ,p_plugin_id=>wwv_flow_api.id(13978710087365632440)
 ,p_file_name=>'js/script.js'
+,p_mime_type=>'text/javascript'
+,p_file_charset=>'utf-8'
+,p_file_content=>wwv_flow_api.varchar2_to_blob(wwv_flow_api.g_varchar2_table)
+);
+end;
+/
+begin
+wwv_flow_api.g_varchar2_table := wwv_flow_api.empty_varchar2_table;
+wwv_flow_api.g_varchar2_table(1) := '2775736520737472696374273B20766172206372656174654E756D6265724669656C64203D2066756E6374696F6E20285F7265662C205F7265663229207B207661722061203D205F7265662E6166666563746564456C656D656E74732C2062203D205F72';
+wwv_flow_api.g_varchar2_table(2) := '6566322E616C6C6F77446563696D616C732C2063203D205F726566322E646563696D616C536570617261746F722C2064203D205F726566322E616C6C6F774E65676174697665732C2065203D2066756E6374696F6E2028662C206729207B207265747572';
+wwv_flow_api.g_varchar2_table(3) := '6E2030203C20662E73706C69742867292E6C656E677468202D2031207D3B20242E6561636828612C2066756E6374696F6E2028662C206729207B20242867292E6F6E28276B65797072657373272C2066756E6374696F6E20286829207B20766172206A20';
+wwv_flow_api.g_varchar2_table(4) := '3D20682E7461726765742E76616C75653B2072657475726E202428682E746172676574292E616464436C6173732827706C7567696E2D6E756D6265722D6669656C6427292C203438203C3D20682E6B6579436F6465202626203537203E3D20682E6B6579';
+wwv_flow_api.g_varchar2_table(5) := '436F6465207C7C202827592720213D3D2062207C7C20682E6B6579436F646520213D3D20632E63686172436F64654174283029207C7C2065286A2C206329203F20275927203D3D3D2064202626203435203D3D3D20682E6B6579436F6465202626202868';
+wwv_flow_api.g_varchar2_table(6) := '2E7461726765742E76616C7565203D2065286A2C20272D2729203F206A2E7265706C61636528272D272C20272729203A20272D27202B206A2C20213129203A20213029207D29207D29207D3B';
+null;
+end;
+/
+begin
+wwv_flow_api.create_plugin_file(
+ p_id=>wwv_flow_api.id(16216203821459869431)
+,p_plugin_id=>wwv_flow_api.id(13978710087365632440)
+,p_file_name=>'js/script.min.js'
 ,p_mime_type=>'text/javascript'
 ,p_file_charset=>'utf-8'
 ,p_file_content=>wwv_flow_api.varchar2_to_blob(wwv_flow_api.g_varchar2_table)

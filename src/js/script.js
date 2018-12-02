@@ -11,7 +11,7 @@ const createNumberField = (
 
   const contains = (text, search) => text.split(search).length - 1 > 0
 
-  for (element of affectedElements) {
+  $.each(affectedElements, (i, element) => {
     
     $(element).on('keypress', event => {
       
@@ -38,5 +38,5 @@ const createNumberField = (
   
       return false
     })
-  }
+  })
 }

@@ -1,9 +1,10 @@
 # APEX Number Field Dynamic Action Plugin
 
-Oracle APEX Dynamic Action Plugin for prevent the user from entering unnecessary characters in the fields whose type is number.
+Oracle APEX Dynamic Action Plugin which prevent the user from entering unnecessary characters in fields whose type is number.
 
 # Changelog
 
+- 1.1.0 - Add a minified version of javascript, solved the problem with Internet Explorer
 - 1.0.0 - Initial release
 
 # Features
